@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="CSS/menu.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div>
+        <span class="menu">메뉴1</span>
+        <span class="menu">메뉴2</span>
+        <span class="menu">메뉴3</span>
+        <span class="menu">메뉴4</span>
+        <span class="menu">메뉴5</span>
+    </div>
+    <div class="btn">메뉴 보이기</div>
+    <script>
+        $('.btn').click(function (){
+            // $(누가).어떤 동작을 할 때(이렇게 해라)
+            // $(누구의).무엇을(어떻게);
+            $('.menu').css("display","block");
+        });
+        // $(누가).어떤 동작을 할 때(이렇게 해라)
+        $(document).ready(function(){
+            $('.btn').click(function(){
+            $('.menu').css("display","block");
+        });
+        $('.menu').hover(function (){
+            // $(누구의).무엇을(어떻게);
+            $(this).css("background-color","darkgreen");
+            $(this).css("transition","0.7s");
+        },function(){
+            $(this).css("background-color","greenyellow");
+            $(this).css("transition","0.5s");
+        })
+    })
+    </script>
+</body>
+</html>
